@@ -1,0 +1,106 @@
+# ===============================================
+# .gitignore
+# Archivos a excluir del repositorio Git
+# ===============================================
+
+# Entorno virtual de Python
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Resultados CSV (opcional - comentar si quieres versionarlos)
+# static/resultados_*.csv
+
+# Gráficos generados (opcional)
+# static/*.png
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Base de datos (si existiera)
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de prueba
+test_*.py
+*_test.py
+
+# Documentación generada
+docs/_build/
+
+# Archivos de respaldo
+*.bak
+*.backup
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos comprimidos (excepto datasets necesarios)
+*.zip
+*.tar.gz
+*.rar
+# ¡Pero NO excluir los datos!
+!templates/Data/*.xlsx
+
+# Docker
+docker-compose.override.yml
+

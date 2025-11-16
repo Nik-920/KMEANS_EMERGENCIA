@@ -1,0 +1,62 @@
+# ===============================================
+# .dockerignore
+# Archivos a excluir de la imagen Docker
+# ===============================================
+
+# Entorno virtual de Python
+.venv/
+venv/
+env/
+ENV/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentación (opcional - comentar si quieres incluirla)
+*.md
+!README.md
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de Windows
+desktop.ini
+
+# Base de datos (si existiera)
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos grandes (ya deberían estar en .gitignore)
+*.zip
+*.tar.gz
+
+# Archivos de desarrollo
+.env
+.env.local
+docker-compose.override.yml
+

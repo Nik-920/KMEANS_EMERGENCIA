@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  # Servicio principal de la aplicación Flask
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sistema-emergencias-ventanilla
+    ports:
+      - "5000:5000"
+    volumes:
+      # Montar código para desarrollo (hot reload)
+      - ./app_mejorado.py:/app/app_mejorado.py
+      - ./static:/app/static
+      - ./templates:/app/templates
+    environment:
+      - FLASK_APP=app_mejorado.py
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    restart: unless-stopped
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  app-network:
+    driver: bridge
+
+# Volúmenes persistentes (opcional - para resultados CSV)
+volumes:
+  static-data:
+

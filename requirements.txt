@@ -1,0 +1,24 @@
+# ===============================================
+# DEPENDENCIAS DEL PROYECTO
+# Sistema de Análisis de Emergencias - Ventanilla
+# ===============================================
+
+# Framework Web
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Manipulación de Datos
+pandas==2.1.4
+numpy==1.26.2
+openpyxl==3.1.2
+
+# Machine Learning
+scikit-learn==1.3.2
+
+# Visualización
+matplotlib==3.8.2
+
+# Utilidades
+python-dateutil==2.8.2
+pytz==2023.3
+
