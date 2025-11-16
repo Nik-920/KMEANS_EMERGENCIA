@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Clustering Geográfico - Ventanilla</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1 class="header-title">🗺️ Clustering Geográfico K-means</h1>
+                <p class="header-subtitle">Análisis de Despliegue Territorial - Ventanilla</p>
+            </div>
+        </header>
+
+        <main>
+            <button class="nav-button" onclick="window.location.href='/'">
+                <i class="fas fa-arrow-left"></i>
+                Volver al Inicio
+            </button>
+
+            <div class="analysis-container" style="margin-top: 2rem;">
+                <!-- Card de Gráfico -->
+                <div class="analysis-card" style="grid-column: 1 / -1;">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h2 class="card-title">Visualización de Clusters Geográficos</h2>
+                    </div>
+
+                    <div class="chart-container">
+                        <img src="data:image/png;base64,{{ imagen }}"
+                             alt="Gráfico de Clustering Geográfico">
+                    </div>
+
+                    <div style="text-align: center; margin-top: 1rem; color: #6c757d;">
+                        <p><strong>Total de registros:</strong> {{ total_registros }} |
+                           <strong>Clusters identificados:</strong> {{ n_clusters }}</p>
+                    </div>
+                </div>
+
+                <!-- Card de Estadísticas por Cluster -->
+                <div class="analysis-card" style="grid-column: 1 / -1;">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <h2 class="card-title">Análisis por Cluster Geográfico</h2>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="tabla-provincia">
+                            <thead>
+                                <tr>
+                                    <th>Cluster ID</th>
+                                    <th>Total Llamadas</th>
+                                    <th>Zona Frecuente</th>
+                                    <th>Sector Frecuente</th>
+                                    <th>Subsector Frecuente</th>
+                                    <th>Densidad</th>
+                                    <th>Top 3 Tipos de Caso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for stat in estadisticas %}
+                                <tr>
+                                    <td style="font-weight: bold; color: #667eea;">
+                                        Cluster {{ stat.cluster_id }}
+                                    </td>
+                                    <td>{{ stat.total_llamadas }}</td>
+                                    <td>{{ stat.zona_frecuente }}</td>
+                                    <td>{{ stat.sector_frecuente }}</td>
+                                    <td>{{ stat.subsector_frecuente }}</td>
+                                    <td>{{ stat.densidad }}</td>
+                                    <td style="text-align: left; font-size: 0.85rem;">
+                                        {% for caso, cantidad in stat.top_casos.items() %}
+                                        <div>• {{ caso }}: <strong>{{ cantidad }}</strong></div>
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recomendaciones -->
+                <div class="analysis-card" style="grid-column: 1 / -1; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h2 class="card-title">Recomendaciones de Despliegue</h2>
+                    </div>
+
+                    <div style="padding: 1rem; line-height: 1.8;">
+                        <p><i class="fas fa-check-circle" style="color: #667eea;"></i>
+                           <strong>Asignación de unidades:</strong> Desplegar más vehículos en clusters con mayor densidad de llamadas.</p>
+
+                        <p><i class="fas fa-check-circle" style="color: #667eea;"></i>
+                           <strong>Rutas optimizadas:</strong> Establecer rutas de patrullaje basadas en sectores agrupados.</p>
+
+                        <p><i class="fas fa-check-circle" style="color: #667eea;"></i>
+                           <strong>Especialización territorial:</strong> Capacitar personal según tipos de emergencias predominantes por zona.</p>
+
+                        <p><i class="fas fa-download" style="color: #28a745;"></i>
+                           <strong>Descargar:</strong>
+                           <a href="{{ url_for('static', filename='resultados_clustering_geografico.csv') }}"
+                              style="color: #667eea; font-weight: bold;">
+                              resultados_clustering_geografico.csv
+                           </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-title">Sistema de Análisis de Emergencias</h3>
+                <p class="footer-text">
+                    Municipalidad de Ventanilla - Callao, Perú<br>
+                    © 2025 - Análisis generado el {{ fecha_actual }}
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Análisis - Emergencias Ventanilla</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="particles"></div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1 class="header-title">🚨 Análisis de Clusters</h1>
+                <p class="header-subtitle">Llamadas Central de Emergencias - Municipalidad de Ventanilla</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="welcome-section">
+                <div class="welcome-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h2 class="welcome-title">Sistema de Análisis Avanzado</h2>
+                <p class="welcome-text">
+                    Bienvenido al sistema de análisis de llamadas de emergencia utilizando algoritmos de
+                    clustering <strong>K-means</strong>. Este sistema identifica patrones temporales para
+                    optimizar turnos de operadores y asignación de recursos.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <div class="stat-label">Llamadas Analizadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-label">Análisis Temporal</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-label">Optimización de Turnos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="stat-label">Ventanilla - Callao</div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="nav-section">
+                <h2 class="nav-title">Seleccione un Análisis</h2>
+                <div class="nav-grid">
+                    <button class="nav-button" onclick="window.location.href='/analisis'">
+                        <i class="fas fa-clock"></i>
+                        Clustering Temporal
+                    </button>
+
+                    <button class="nav-button" onclick="window.location.href='/analisis-geografico'">
+                        <i class="fas fa-map-marked-alt"></i>
+                        Clustering Geográfico
+                    </button>
+
+                    <button class="nav-button" onclick="window.location.href='/analisis-recursos'">
+                        <i class="fas fa-truck"></i>
+                        Clustering de Recursos
+                    </button>
+                </div>
+        </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-title">Sistema de Análisis de Emergencias</h3>
+                <p class="footer-text">
+                    Municipalidad de Ventanilla - Callao, Perú<br>
+                    Desarrollado con Python, Flask, Scikit-learn y K-means<br>
+                    © 2025 - Todos los derechos reservados
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Generar partículas animadas
+        const particles = document.querySelector('.particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.width = Math.random() * 5 + 2 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            particles.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
