@@ -9,7 +9,6 @@
 Sistema de análisis de llamadas de emergencia utilizando algoritmos de **clustering K-means** y **Random Forest** para optimizar turnos de operadores y asignación de recursos.
 
 -
-
 ## 📋 Tabla de Contenidos
 
 - [Descripción](#descripción)
