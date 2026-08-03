@@ -29,7 +29,7 @@ Sistema de análisis de llamadas de emergencia utilizando algoritmos de **cluste
 
 ## 🎯 Descripción
 
-Este sistema analiza **56,715 registros** de llamadas de emergencia de la Municipalidad de Ventanilla (Callao, Perú) para identificar patrones y optimizar recursos mediante:
+Este sistema analiza **56,715 registros** de llamadas de emergencia de la Municipalidad de Ventanilla (Callao, Perú) para identificar patrones y optimizar recursos mediante
 
 - **Clustering Temporal:** Patrones de hora, día y turno
 - **Clustering Geográfico:** Distribución por zonas y sectores
