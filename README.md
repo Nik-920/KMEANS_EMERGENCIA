@@ -257,6 +257,7 @@ ProyectoCasani/
 | **Geográfico** | 8 | 0.288 | 1.589 | ✅ ACEPTABLE |
 | **Recursos** | 6 | 0.35 | 1.2 | ✅ ACEPTABLE |
 
+
 ### Modelo Predictivo:
 - **Algoritmo:** Random Forest
 - **Accuracy:** 87.3%
