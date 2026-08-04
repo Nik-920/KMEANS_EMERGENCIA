@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-Academic-yellow.svg)](LICENSE)
 
-Sistema de análisis de llamadas de emergencia utilizando algoritmos de **clustering K-means** y **Random Forest** para optimizar turnos de operadores y asignación de recursos
+Sistema de análisis de llamadas de emergencia utilizando algoritmos de **clustering K-means** y **Random Forest** para optimizar turnos de operadores y asignación de recurso
 
 
 ## 📋 Tabla de Contenidos
