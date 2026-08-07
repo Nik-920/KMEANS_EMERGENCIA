@@ -46,7 +46,7 @@ Este sistema analiza **56,715 registros** de llamadas de emergencia de la Munici
 ✅ **Interfaz web moderna** con visualizaciones interactivas  
 ✅ **Exportación a CSV** de resultados  
 ✅ **Optimizado** para datasets grandes (30x más rápido)  
-✅ **Dockerizado** para fácil despliegue  
+✅ **Dockerizado** para fácil despliegue 
 
 ---
 
