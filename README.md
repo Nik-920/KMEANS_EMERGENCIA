@@ -21,7 +21,7 @@ Sistema de análisis de llamadas de emergencia utilizando algoritmos de **cluste
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Tecnologías](#tecnologías)
 - [Resultados](#resultados)
-- [Documentación](#documentación
+- [Documentación](#documentació
 - [Contribuir](#contr
 - [Licencia](#licenc
 ---
