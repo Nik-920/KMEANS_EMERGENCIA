@@ -22,7 +22,7 @@ Sistema de análisis de llamadas de emergencia utilizando algoritmos de **cluste
 - [Tecnologías](#tecnologías)
 - [Resultados](#resultados)
 - [Documentación](#documen
-- [Contribuir](#cont
+- [Contribuir](#con
 - [Licencia](#licenc
 ---
 
